@@ -1,0 +1,20 @@
+[package]
+name = "phanes"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+
+reqwest = { version = "0.11.22", features = ["json"] }
+tokio = { version = "1.33.0", features = ["full"] }
+serde_json = "1.0"
+serde = { version = "1.0.192", features = ["derive"] }
+tokio-tungstenite = { version = "0.20.1", features = ["native-tls"] }
+futures-util = "0.3"
+alloy-json-abi = { version = "0.4.2", path = "./core/crates/json-abi" }
+alloy-primitives = { version = "0.4.2", path = "./core/crates/primitives" }
+alloy-dyn-abi = { version = "0.4.2", path = "./core/crates/dyn-abi" }
+alloy-sol-types = { version = "0.4.2", path = "./core/crates/sol-types", features=['json'] }
+syn-solidity = { version = "0.4.2", path = "./core/crates/syn-solidity" }
